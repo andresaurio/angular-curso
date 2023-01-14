@@ -1,0 +1,30 @@
+<p>listado de heroes</p>
+<!-- el ng for recorre el arreglo de heroes e imprime por cada uno la plabra item -->
+<!--<ul>
+    <li *ngFor="let heroe of heroes; let i = index">
+     {{ i }} {{ heroe}}
+    </li> 
+<ul>-->
+
+   <!-- <div *ngIf="heroeBorrado !== '' ">
+        <h3> Héroe Borrado</h3>
+        <span> {{ heroeBorrado }}</span>
+    </div> -->
+    <!--El siguiente código hace un if else-->
+    <div *ngIf="heroeBorrado; else noBorrado">
+        <h3> Héroe heroeBorrado
+        <small> {{ heroeBorrado }}</small></h3>
+    </div>
+
+    <ng-template #noBorrado>
+        <h3>No ha borrado nada</h3>
+    </ng-template>    
+<button (click)="borrarHeroe()">
+    Borrar
+</button>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let i = index">
+     {{ i }} {{ heroe}}
+    </li> 
+<ul>
