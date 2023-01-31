@@ -7,6 +7,7 @@ import { HeroeComponent } from './heroes/heroe/heroe.component';
 import { ListadoComponent } from './heroes/listado/listado.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { ContadorModule } from './contador/contador/contador.module';
+import { DbzModule } from './dbz/dbz.module';
 
 //Tarea 
 //Crear un módulo llamado ContadorModule
@@ -25,6 +26,8 @@ import { ContadorModule } from './contador/contador/contador.module';
         HeroesModule,
         //  aqui abajo  Importé el modulo de contador
         ContadorModule,
+        DbzModule
+
 
         
        
