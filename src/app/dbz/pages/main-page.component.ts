@@ -1,18 +1,16 @@
-import { Component } from '@angular/core';
-import { Personaje } from '../intefaces/dbz.interface';
-
+import { Component} from '@angular/core';
+import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  
+  selector: 'app-dbz-main-page',
+  templateUrl: './main-page.component.html'
 })
-export class MainPageComponent {
 
+export class MainPageComponent  {
   personajes: Personaje[] =[
     {
       nombre: 'Goku',
-      poder:  15000 
+      poder:  15000
 
     },
     {

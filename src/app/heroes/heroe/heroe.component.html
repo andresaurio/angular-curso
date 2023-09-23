@@ -13,13 +13,25 @@
     <td> Capitalizado : </td>
     <dd> {{ nombreCapitalizado }} </dd>
 
+  </dl>
 
-</dl>   
 
-<button (click)="cambiarNombre()">
-    Cambiar Héroe
+
+<p>utilizaremos en esta parte ngIf para condicionar que aparezca o no
+  el botón de acuerdo a la condición *ngIf="nombre !== 'Spiderman'"</p>
+<!--  -->
+<!-- *ngIf="edad !== 30" -->
+<button
+   *ngIf="nombre !== 'Spiderman'"
+  (click)="cambiarNombre()" class="btn btn-primary mx-2">
+  Cambiar Héroe
 </button>
 
-<button (click)="cambiarEdad()">
-    Cambiar edad 
+<button
+  (click)="cambiarEdad()" class="btn btn-primary">
+  Cambiar edad
 </button>
+
+
+
+

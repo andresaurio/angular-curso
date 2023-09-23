@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
+
 @Component({
- selector: 'app-heroe',
- templateUrl: 'heroe.component.html'
+ selector: 'app-heroes-heroe',
+ templateUrl: './heroe.component.html'
 
 })
 export class HeroeComponent{
@@ -26,7 +27,5 @@ cambiarNombre():void{
 
 cambiarEdad(): void {
     this.edad = 30;
-
 }
-
 }
