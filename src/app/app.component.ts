@@ -10,12 +10,6 @@ export class AppComponent {
   public title: string = 'Hola Mundo';
   public counter :number = 10;
 
-  public nombre: string='Ironaman';
-
-  cambiarNombre():void{
-    this.nombre = 'Spiderman';
-
-}
 
   increasedBy():void {
     this.counter+=1;

@@ -28,4 +28,11 @@ cambiarNombre():void{
 cambiarEdad(): void {
     this.edad = 30;
 }
+
+resetForm():void{
+  this.nombre = 'Ironman';
+  this.edad = 45;
+
+}
+
 }

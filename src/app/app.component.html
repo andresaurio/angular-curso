@@ -1,5 +1,4 @@
 <!--<app-contador></app-contador>> -->
-<!--<app-listado></app-listado> -->
 <p>Aqui me dispongo a cargar el primer módulo dbz</p>
 <app-dbz-main-page></app-dbz-main-page>
 <p>Cargo el segundo módulo que es este mismo AppComponent</p>
@@ -18,11 +17,8 @@ app.component.ts
 <p>Aqui llamo al componente de heroes selector app-heroe que está en el heroe.componet.ts</p>
 tener en cuenta que para que cargue el modulo debe estar en heroes.module.ts en declaration y en exports
 <app-heroes-heroe></app-heroes-heroe>
+<p>Aqui se procede a llamar al módulo de listado app-listado </p>
+<app-listado></app-listado>
 
 
-<button
-  *ngIf="nombre !== 'Spiderman'"
-  (click)="cambiarNombre()" class="btn btn-primary mx-2">
-  Boton de prueba ñero
-</button>
 

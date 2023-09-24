@@ -1,9 +1,9 @@
-<p>listado de heroes</p>
+<h1>listado de heroes</h1>
 <!-- el ng for recorre el arreglo de heroes e imprime por cada uno la plabra item -->
 <!--<ul>
     <li *ngFor="let heroe of heroes; let i = index">
      {{ i }} {{ heroe}}
-    </li> 
+    </li>
 <ul>-->
 
    <!-- <div *ngIf="heroeBorrado !== '' ">
@@ -12,19 +12,27 @@
     </div> -->
     <!--El siguiente código hace un if else-->
     <div *ngIf="heroeBorrado; else noBorrado">
-        <h3> Héroe heroeBorrado
-        <small> {{ heroeBorrado }}</small></h3>
-    </div>
+      <h3> Héroe Borrado
+      <small class="text-danger"> {{ heroeBorrado }}</small></h3>
+   </div>
+
+    <p>ng-template es un div que no existe en este caso el numeral evalua
+      la parte del div de arriba y trae el valor abajo
+      en la linea 14 se evalua si se borró heroe sinó se ejecuta noBorrado,
+      si te fijas en la linea 25  se hace la referencia local con #, #noBorrado
+    </p>
 
     <ng-template #noBorrado>
         <h3>No ha borrado nada</h3>
-    </ng-template>    
+    </ng-template>
 <button (click)="borrarHeroe()">
     Borrar
 </button>
-
+<p>listo todos los heroes de la lista que tenemos en listado.component.ts
+     *ngFor="let heroe of heroes; let i = index">
+ </p>
 <ul>
     <li *ngFor="let heroe of heroes; let i = index">
      {{ i }} {{ heroe}}
-    </li> 
+    </li>
 <ul>

@@ -19,8 +19,7 @@
 
 <p>utilizaremos en esta parte ngIf para condicionar que aparezca o no
   el botón de acuerdo a la condición *ngIf="nombre !== 'Spiderman'"</p>
-<!--  -->
-<!-- *ngIf="edad !== 30" -->
+
 <button
    *ngIf="nombre !== 'Spiderman'"
   (click)="cambiarNombre()" class="btn btn-primary mx-2">
@@ -28,8 +27,19 @@
 </button>
 
 <button
-  (click)="cambiarEdad()" class="btn btn-primary">
+ *ngIf="edad !== 30"
+ (click)="cambiarEdad()" class="btn btn-primary">
   Cambiar edad
+</button>
+
+<p>
+  al darle reset sobre el botón cambia heroe a Ironman y edad a 45
+  haciendo que se habiliten los botones nuevamente
+</p>
+<button
+  (click)="resetForm()" class="btn btn-primary mx-2">
+  Reset
+
 </button>
 
 

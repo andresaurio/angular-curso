@@ -9,16 +9,16 @@ import { ContadorComponent } from './contador.component';
 //modulos asocioados a los componentes
 @NgModule({
     declarations: [
-        
-       ContadorComponent 
+
+       ContadorComponent
     ],
     exports: [
 
         ContadorComponent
-        
+
     ],
     imports: [
-        //CommonModule
+        CommonModule
     ]
 })
 export class ContadorModule{}
