@@ -3,7 +3,8 @@
 <p>aqui cargamos un ngfor de characterList </p>
 <p>Clase 61 linea 8 se agrega el indice a i y se le asigna a cada personajes</p>
 <p>linea 14 verificamos si el indice es el primero de la lista</p>
-<p>https://getbootstrap.com/docs/5.3/components/list-group/#variants</p>
+<p> Documentación de bootstrap https://getbootstrap.com/docs/5.3/components/list-group/#variants</p>
+<p>Clase 62 se evidencia la forma de condicionar un estilo con ngClass</p>
 
 
 <ul class="list-group">
@@ -15,7 +16,11 @@
               let isOdd = odd;
               "
 
-  class="list-group-item list-group-item-success">
+  class="list-group-item"
+  [ngClass]="{'list-group-item-success':isFirst,
+              'list-group-item-danger' : isLast,
+              'list-group-item-warning': isOdd
+             }" >
   <span class="text-primary">{{ i }}. </span>
   <span>{{ character.name }} - </span>
   <strong> Power:  </strong>
@@ -23,6 +28,7 @@
   <span> Es el primero del indice {{ isFirst }}</span>
   <span> Es el ultimno del indice {{ isLast }}</span>
   <span> Es Par {{ isEven }}</span>
+  <span> Es ImPar {{ isOdd }}</span>
 </li>
 
 
