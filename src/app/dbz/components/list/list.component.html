@@ -7,14 +7,22 @@
 
 
 <ul class="list-group">
-  <li *ngFor="let character of characterList; let i = index"
+  <li *ngFor="let character of characterList;
+              let i = index;
+              let isFirst = first;
+              let isLast = last;
+              let isEven = even;
+              let isOdd = odd;
+              "
+
   class="list-group-item list-group-item-success">
-  <span class="text-primary">{{ i +1}}. </span>
+  <span class="text-primary">{{ i }}. </span>
   <span>{{ character.name }} - </span>
   <strong> Power:  </strong>
   <span>{{ character.power }}</span>
-  <span> Es el primero del indice {{i === 0}}</span>
-  <span> Es el ultimno del indice {{i === characterList.length - 1}}</span>
+  <span> Es el primero del indice {{ isFirst }}</span>
+  <span> Es el ultimno del indice {{ isLast }}</span>
+  <span> Es Par {{ isEven }}</span>
 </li>
 
 

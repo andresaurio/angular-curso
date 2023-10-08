@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 *
+
 {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 200;
@@ -53,3 +54,6 @@
     display: block;
     margin: 5px;
   }
+
+  /* con este import ya me trae los estilos de bootstrap */
+  @import "~bootstrap/dist/css/bootstrap.css";
