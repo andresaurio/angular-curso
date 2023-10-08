@@ -5,6 +5,7 @@ import { PersonajesComponent } from './personajes/personajes.component';
 import { AgregarComponent } from './agregar/agregar.component';
 import { MainPageComponent } from './pages/main-page.component';
 import { ListComponent } from './components/list/list.component'
+import { AddCharacterComponent } from './components/add-character/add-character.component';
 
 
 
@@ -13,7 +14,10 @@ import { ListComponent } from './components/list/list.component'
     MainPageComponent,
     PersonajesComponent,
     AgregarComponent,
-    ListComponent
+    ListComponent,
+    AddCharacterComponent
+
+
   ],
   exports: [
     MainPageComponent
