@@ -1,13 +1,20 @@
 
 <h4>Listado cargado de components\list</h4>
 <p>aqui cargamos un ngfor de characterList </p>
+<p>Clase 61 linea 8 se agrega el indice a i y se le asigna a cada personajes</p>
+<p>linea 14 verificamos si el indice es el primero de la lista</p>
+<p>https://getbootstrap.com/docs/5.3/components/list-group/#variants</p>
+
 
 <ul class="list-group">
-  <li *ngFor="let character of characterList"
-  class="list-group-item">
+  <li *ngFor="let character of characterList; let i = index"
+  class="list-group-item list-group-item-success">
+  <span class="text-primary">{{ i +1}}. </span>
   <span>{{ character.name }} - </span>
-  <strong>Power:  </strong>
+  <strong> Power:  </strong>
   <span>{{ character.power }}</span>
+  <span> Es el primero del indice {{i === 0}}</span>
+  <span> Es el ultimno del indice {{i === characterList.length - 1}}</span>
 </li>
 
 
