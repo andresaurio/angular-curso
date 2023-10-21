@@ -2,15 +2,33 @@
   add-character works!
 </p>
 
+<!-- clase 63 para poner el value que apunte a una propiedad del add-char.component.ts
+colocamos value entre corchetes
+() los parentesis indican un evento ejemplo (click)
+[] las llaves cuadradas se usan para asociar un atributo ejemplo [value]="character.name"
+[()] si se combinan las dos usamos atributo y evento este es el two ways data bind
+ejemplo [(ngModel)]="character.name"
 
+-->
 <h4>Agregar personaje </h4>
     <form class="row">
-        <input type="text" class="form-control mb-2"  placeholder="Nombre">
-        <input type="number" placeholder="Poder">
+        <input type="text"
+        [(ngModel)]="character.name"
+        name="name"
+        class="form-control mb-2"  placeholder="Nombre">
+
+        <input type="number"
+        [(ngModel)]="character.power"
+        name="power"
+        placeholder="Poder">
 
       <button type="submit" class="btn btn-primary">
         agregar
       </button>
+
+      <!-- etiqueta pre que viene configurada con bootstrap
+      y convierte character a json y lo muestra en pantalla-->
+      <pre>{{character | json}}</pre>
 
     </form>
 
