@@ -9,9 +9,13 @@ colocamos value entre corchetes
 [()] si se combinan las dos usamos atributo y evento este es el two ways data bind
 ejemplo [(ngModel)]="character.name"
 
+Clase 64  ngSubmit se utiliza para propagar el formulario para evitar sobrecarga
+del módulo
+en la clase se coloca el  (ngSubmit) en form class asignadole emitCharacter()
+
 -->
 <h4>Agregar personaje </h4>
-    <form class="row">
+    <form class="row" (ngSubmit)="emitCharacter()">
         <input type="text"
         [(ngModel)]="character.name"
         name="name"

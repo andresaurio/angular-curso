@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
+import { outputAst } from '@angular/compiler';
 
 @Component({
   selector: 'app-dbz-add-character',
@@ -14,6 +15,11 @@ import { Character } from '../../interfaces/character.interface';
 //el form o desde typescript y que esta práctica no es recomendable
 export class AddCharacterComponent  {
 
+  //clase 64 utilizamos el decorador @Output() para emitir al padre
+  @Output()
+  public onNewCharacter: EventEmitter<Character>= new EventEmitter();
+
+
  public character: Character={
   name: 'Andres',
   power:0
@@ -21,6 +27,13 @@ export class AddCharacterComponent  {
 
  emitCharacter():void{
   console.log(this.character);
+  if(this.character.name.length === 0) return;
+
+  this.onNewCharacter.emit(this.character);
+
+  this.character.name='';
+  this.character.power=0;
+
  }
 
 }
